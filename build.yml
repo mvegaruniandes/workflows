@@ -28,7 +28,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.projectKey=mvegaruniandes_workflows
-            -Dsonar.organization=mvegaruniandes
+            -Dsonar.projectKey=prueba
+            -Dsonar.organization=prueba
             -Dsonar.sources=.
             -Dsonar.sourceEncoding=UTF-8
