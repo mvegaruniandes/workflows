@@ -26,5 +26,5 @@ run: |
 name: SonarCloud Scan
 uses: SonarSource/sonarcloud-github-action@master
 env:
-  GITHUB_TOKEN: ${{ secrets.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 }}
-  SONAR_TOKEN: ${{ secrets.91a100f73a7fd4f64029050f54099f8c6fa85fb4 }}  
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  
