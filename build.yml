@@ -1,0 +1,30 @@
+name: Build
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+
+name: Instalación de librerías y dependencias
+run: |
+  python -m pip install --upgrade pip
+  pip install -r requirements.txt
+
+name: SonarCloud Scan
+uses: SonarSource/sonarcloud-github-action@master
+env:
+  GITHUB_TOKEN: ${{ secrets.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 }}
+  SONAR_TOKEN: ${{ secrets.91a100f73a7fd4f64029050f54099f8c6fa85fb4 }}  
